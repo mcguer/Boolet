@@ -8,13 +8,13 @@ function MovePlayer()
 	keyUp = keyboard_check(ord("W"));
 	keyDown = keyboard_check(ord("S"));
 
-	var moveHor = keyRight - keyLeft;
-	var moveVer = keyDown - keyUp;
-	hsp = moveHor * walksp;
-	vsp = moveVer * walksp;
+	var v_moveHor = keyRight - keyLeft;
+	var v_moveVer = keyDown - keyUp;
+	var v_hsp = v_moveHor * walksp;
+	var v_vsp = v_moveVer * walksp;
 
 
-	x += hsp;
-	y += vsp;
+	x += v_hsp;
+	y += v_vsp;
 	
 }

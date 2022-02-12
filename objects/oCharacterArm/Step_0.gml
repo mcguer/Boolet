@@ -3,14 +3,15 @@
 
 if(m_OwningCharacter)
 {
-	x = m_OwningCharacter.x +  m_ArmSocketDistance[0];	
-	y = m_OwningCharacter.y +  m_ArmSocketDistance[1];
+	// Set arm position with offset
+	x = m_OwningCharacter.x +  m_ArmSocketOffset[0];	
+	y = m_OwningCharacter.y +  m_ArmSocketOffset[1];
 }
 
 a_DirToMouse = point_direction(x, y, mouse_x, mouse_y);
+// Set arm sprite angle
 image_angle = a_DirToMouse;
 
-//var offset = [ x - m_ShootSocketDistance[0], y - m_ShootSocketDistance[1]];
-
+// Get position to spawn the bullet
 m_ShootSocket[0] = x + lengthdir_x(a_dist, a_DirToMouse + a_dir);
 m_ShootSocket[1] = y + lengthdir_y(a_dist, a_DirToMouse + a_dir);
