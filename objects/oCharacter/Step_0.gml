@@ -5,9 +5,20 @@ keyClick = mouse_check_button_released(mb_left);
 {
 	MovePlayer();
 	
-	if(keyClick)
+	#region // Shooting
+	if(keyClick && m_CanShoot == true)
 	{
-		Shoot_Basic();
+		m_CanShoot = false;
+		m_Bool = random_range(0,1)
+		if(m_Bool)
+		{
+			Shoot_Basic();
+		}
+		else
+		{
+			FireBlank();
+		}
 	}
+	#endregion // Shooting
 
 }

@@ -5,6 +5,8 @@ m_CharacterArm = instance_create_layer(x,y, "Foreground", oCharacterArm);
 
 m_BulletIndex = 0;
 walksp = 10;
+m_Bool = false;
+m_CanShoot = true;
 
 for(i = 0; i <= 4; i++)
 {

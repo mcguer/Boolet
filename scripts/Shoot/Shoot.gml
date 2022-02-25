@@ -13,7 +13,9 @@ function Shoot_Basic()
 		
 	// Set bullet direction and speed
 	m_BulletPool[m_BulletIndex].a_MouseDir =  oCharacterArm.a_DirToMouse;
-	m_BulletPool[m_BulletIndex].a_ShotSpeed = 10;		
+	m_BulletPool[m_BulletIndex].a_ShotSpeed = 25;		
 		
 	m_BulletIndex += 1;
+	
+	m_CharacterArm.alarm[0] = room_speed * 0.5;
 }
